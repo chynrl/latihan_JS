@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="javascript:void(0)" 
+    onClick="openAlert('oiiii')"
+    onmouseover="this.style.color='red'"
+    onmouseout="this.style.color='black'"
+    onmousedown="this.text='Jangan Click!'"
+    onmouseup="this.text='Makasih'"
+    > 
+    Click Saya</a>
+
+    <br>
+    <br>
+
+    <input type="number" id="txtJumlah" placeholder="Masukan nilai"/>
+    <input type="number" id="txtKali" placeholder="Masukan nilai kali"/>
+
+    <button type="button" onClick="kali()">Kalikan</button>
+    <br>
+    <h3 id="hasil"></h3>
+
+
+
+    <script>
+      function openAlert(param1) {
+        alert(param1);
+      }
+
+      function kali2(){
+        var komponenText = document.getElementById('txtJumlah');
+        var isiKomponen = komponenText.value;
+        var hasilKali = isiKomponen*2;
+
+        document.getElementById('hasil').innerHTML = "Hasilnya adalah: " + hasilKali;
+      }
+
+      function kali(){
+        var komponenJumlah = document.getElementById('txtJumlah');
+        var komponenKali = document.getElementById('txtKali');
+
+        var isiKomponenJumlah = komponenJumlah.value;
+        var isiKomponenKali = komponenKali.value;
+
+        var hasilKali = isiKomponenJumlah * isiKomponenKali;
+
+        document.getElementById('hasil').innerHTML = "Hasilnya adalah: " + hasilKali;
+      }
+
+      
+    </script>
+  </body>
+</html>

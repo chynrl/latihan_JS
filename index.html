@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar JS</title>
+  </head>
+  <body>
+    <!-- <p id="testText" class="test-text"></p> -->
+    <!-- <p id="sapaSaya"></p> -->
+    <p id="demo"></p>
+
+    <!-- penulisan id: camelcast class : pake strip -->
+
+    <script>
+      // inject value kepada tag HTML
+      // document.getElementById('testText').innerHTML = "Hello guys";
+
+      // // inject document suatu value dan html
+      // document.write('<h3>Hallo juga<h3/>');
+
+      // var untuk membuat vaariabel secara global
+      //   var myName = prompt("Sebutkan nama anda");
+
+      //   if (myName != null) {
+      //     document.getElementById("sapaSaya").innerHTML =
+      //       "<h3>Hallo, " + myName + "</h3>";
+      //   } else {
+      //     alert("Kenalan dulu yu");
+      //   }
+      // + untuk menambahkan string
+      // document.write("5 X 5 =", 5 * 5, "<br/>");
+      // document.write("5 : 5 =", 5 / 5, "<br/>");
+      // document.write("5 + 5 =", 5 + 5, "<br/>");
+      // document.write("5 - 5 =", 5 - 5, "<br/>");
+
+      // var uang= 12000.50
+      // document.write("Uang saya:", (uang/3).toFixed(2), "<br/>");
+
+      // var bilangan = 5;
+      // document.write("++bilangan = ", ++bilangan, "<br/>");
+      // document.write("--bilangan = ", --bilangan, "<br/>");
+
+      // var bilangan1 = 10;
+      // var bilangan2 = 20;
+
+      // document.write("Jumlah = ",bilangan1 + bilangan2, "<br/>");
+
+      // document.write("Tebak Hasil 5 + 4 x 2 =  ", 5+4*2, "<br/>");
+      // document.write("Tebak Hasil (5 + 4) x 2 =  ", (5+4)*2, "<br/>");
+
+      // var bilanganRound = 5.45;
+      // document.write("Math ceil() = ", Math.ceil(bilanganRound), "<br/>");
+      // document.write("Math floor() = ", Math.floor(bilanganRound), "<br/>");
+      // document.write("Math round() = ", Math.round(bilanganRound), "<br/>");
+
+      // var stringPanjang = "Ini adalah " + "String yang " + "sangat panjang sekali";
+      // document.write("Jumlah strring: ", stringPanjang.length, "</br>");
+      // document.write("'Sangat' Index ke: ", stringPanjang.indexOf("Sangat"), "</br>")
+      // document.write(stringPanjang.slice(4,10), "<br/>");
+      // document.write(stringPanjang.slice(4), "<br/>");
+      // document.write(stringPanjang.substr(23, 4), "<br/>");
+      // document.write(stringPanjang.replace(("Panjang", "pendek banget"), "<br/>"));
+      // console.log(stringPanjang.split())
+      // console.log(stringPanjang.split(" "))
+
+      // var arrString = stringPanjang.split(" ");
+      // console.log(arrString[3])
+      // console.log(arrString[3].toUpperCase());
+      // console.log(arrString[3].toLowerCase());
+
+      // var strStyle = "Nurul Cahyani"
+
+      // document.write("<br></br>");
+      // document.write("Text bold : ", strStyle.bold(), "<br/>")
+      // document.write("Text strike: ", strStyle.strike(), "<br/>")
+      // document.write("Text italics: ", strStyle.italics(), "<br/>")
+      // document.write("Text besar: ", strStyle.fontsize("6"), "<br/>")
+      // document.write("Text sub: ", strStyle.sub(), "<br/>")
+      // document.write("Text sup: ", strStyle.sup(), "<br/>")
+
+      // //operator statement
+      // var umur =6
+      // // if((umur >= 5) && (umur <= 6)){
+      // //     document.write("Pergi ke TK" + "<br/>")
+      // // }else if(umur > 15){
+      // //     document.write("Pergi sekolah", "<br/>")
+      // // }else{
+      // //     document.write("Masih remaja", "<br/>");
+      // // }
+      // switch(umur){
+      //     case 5 :
+      //         document.write("Umur 5 tahun", "<br/>");
+      //         break;
+      //     case 10:
+      //         document.write("Umur 10 tahun", "<br/>")
+      //         break;
+      //     default:
+      //         document.write("umur tidak diketahui", "<br/>")
+      // }
+
+      // boolean
+      document.write("true : ", !true, "<br/>");
+      document.write("false : ", !false, "<br/>");
+
+      var bilanganBoolean = 5;
+      document.write('"5" == 5', "5" == 5, "<br/>"); //true
+      document.write('"5" === 5', "5" === 5, "<br/>"); //false
+
+      //(kondisi) ? iftrue : iffalse
+      var cekUmur =
+        bilanganBoolean >= 10 ? "Lebih dari 10 tahun" : "Kurang dari 10 tahun";
+      document.write("Cek umur = ", cekUmur, "<br/>");
+
+      //var i = 1;
+
+      // while(i <= 10){
+      //     document.getElementById('demo').innerHTML += i + "<br/>";
+      //     console.log(i);
+      //     i++;
+      // }
+
+      // do{
+      //     document.getElementById('demo').innerHTML += "Nomor ";
+      //     document.getElementById('demo').innerHTML += i + "<br/>";
+      //     console.log(i);
+      //     i++;
+      // }while(i <= 10){
+      //     document.getElementById('demo').innerHTML += "Cukup";
+      // }
+
+      for (i = 0; i <= 20; i++) {
+        if (i === 12) {
+          continue; //lanjutkan
+        }
+
+        if (i === 15) {
+          break; //berhenti
+        }
+        document.getElementById("demo").innerHTML += i + "<br/>";
+      }
+      var myData = ["Nurul Cahyani", "BDG", 10000000]; //array[]
+      document.write("cek index 0: ", myData[0], "<br/>");
+      myData[3] = "chynrl18@gmail.com";
+      document.write("cek index 3: ", myData[3], "<br/>");
+
+      document.write(myData.join(" "), "<br/>");
+
+      var nilai = [1, 25, 756, 98, 62, 2, 5]; //array
+      nilai.sort(function (x, y) {
+        return x - y;
+      }); //funcion sort ada x dan y [x-y dari kecil ke besar]
+      document.write("nilai array : ", nilai.toString("<br/"));
+
+      document.write(
+        "<br/>================================================</br>"
+      );
+      function dikalikan(param1) {
+        var variabel1 = 2;
+
+        return param1 * variabel1;
+      }
+
+      document.write("3 * 2  = ", dikalikan(3), "<br/>");
+
+      function kalifungsi(func1, param2) {
+        return func1(param2);
+      }
+      document.write("5 * 2  = ", kalifungsi(dikalikan, 5), "<br/>");
+
+      function kaliArray(paramArray1) {
+        var returnArray = [];
+
+        for (i = 0; i < paramArray1.length; i++) {
+          returnArray.push(paramArray1[i] * 2);
+        }
+        return returnArray;
+      }
+      document.write(
+        "kalikan array jadi 2 [5,6,7,8,9] = ",
+        kaliArray([5, 6, 7, 8, 9]),
+        "<br/>"
+      );
+    </script>
+  </body>
+</html>

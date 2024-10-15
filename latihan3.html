@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+</head>
+<body>
+    <button type="button" onClick="tampilkanDataAssociative()">Tampilkan</button>
+    <div id="containerSinglePerson"></div>
+
+    <script>
+        var dataMahasiswa = ['Nurul', 24, 'Bandung'];//single array
+        var dataMahasiswaKelas = [
+            ['Nurul', 24, 'Bandung'],
+            ['Nuy', 23, 'Jakarta'],
+            ['Nur', 22, 'Bogor'],
+            ['ul', 21, 'Sukabumi']
+        ];// asssociative array
+
+        function tampilkanData(){
+            var ulElm = document.createElement("ul");
+
+            var liElm1 = document.createElement("li");
+            liElm1.innerHTML = "Nama : " + dataMahasiswa[0];
+
+            
+            var liElm2 = document.createElement("li");
+            liElm2.innerHTML = "Umur : " + dataMahasiswa[1];
+
+            
+            var liElm3 = document.createElement("li");
+            liElm3.innerHTML = "Kota: " + dataMahasiswa[2];
+
+            ulElm.appendChild(liElm1);
+            ulElm.appendChild(liElm2);
+            ulElm.appendChild(liElm3);
+
+            var containerElm = document.getElementById('containerSinglePerson');
+            containerElm.appendChild(ulElm);// data terus terkirim
+            //appendchild=mengirim dibawahnya
+            //append=dibawahnya juga
+            //prepend=sebelum data
+        }
+
+        function tampilkanData2(){
+            var appenedElm = `<ul>
+                    <li>Nama : ${dataMahasiswa[0]}</li>
+                    <li>Umur : ${dataMahasiswa[1]}</li>
+                    <li>Kota : ${dataMahasiswa[2]}</li>
+                </ul>`;
+
+            var containerElm = document.getElementById('containerSinglePerson');
+            containerElm.innerHTML=appenedElm;
+        }
+        
+        function tampilkanDataAssociative(){
+
+            
+            var appenedElm = dataMahasiswaKelas.map(row =>
+                `<ul>
+                    <li>Nama : ${row[0]}</li>
+                    <li>Umur : ${row[1]}</li>
+                    <li>Kota : ${row[2]}</li>
+                </ul>`).join('');
+
+            var containerElm = document.getElementById('containerSinglePerson');
+            containerElm.innerHTML=appenedElm;
+        }
+        
+    
+    </script>
+</body>
+</html>
